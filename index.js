@@ -7,7 +7,7 @@ app.get("", (req, res) => {
 })
 
 app.post("/push", function(req, res) {
-  res.send("got this post request");
+  res.send(req);
 })
 
 app.listen(port, () => {
