@@ -7,7 +7,7 @@ app.get("", (req, res) => {
 })
 
 app.post("/push", function(req, res) {
-  res.send(req.body.id);
+  res.send(req.body);
 })
 
 app.listen(port, () => {
