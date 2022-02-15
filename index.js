@@ -1,13 +1,15 @@
 const app = require("express")();
-
 const port = process.env.PORT || 3000;
+
+var bodyParser = require("body-parser");
+app.use(bodyParser.json());
 
 app.get("", (req, res) => {
   res.send("Hello World!");
 })
 
 app.post("/push", function(req, res) {
-  res.send(req.body[1]);
+  res.send(req.body);
 })
 
 app.listen(port, () => {
