@@ -2,7 +2,7 @@ const app = require("express")();
 const port = process.env.PORT || 3000;
 
 var bodyparser = require("body-parser");
-app.use(bodyparser.urlencoded({extended: false}));
+app.use(bodyparser.json());
 
 app.get("", (req, res) => {
   res.send("Hello World!");
